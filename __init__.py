@@ -118,7 +118,6 @@ def get_hwnd_from_title(title):
 
 def get_window_pos(hwnd):
     pos = RECT()
-    ShowWindow(hwnd, SW_NORMAL)
     GetWindowRect(hwnd, byref(pos))
     return (pos.left, pos.top, pos.right, pos.bottom)
 
